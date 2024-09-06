@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { updateEmployee, addEmployee } from "../actions/employeeActions";
 
 const EmployeeForm = () => {
   const { id } = useParams();
-  const history = useHistory();
+  const history = useNavigate();
   const dispatch = useDispatch();
   const employees = useSelector((state) => state.employeeReducer.employees);
 

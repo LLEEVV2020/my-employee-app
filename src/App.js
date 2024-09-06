@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import Home from "./views/Home";
 import EditEmployee from "./views/EditEmployee";
 import "./styles/app.scss";
@@ -13,10 +13,10 @@ const App = () => {
           <Link to="/edit/new">Добавить сотрудника</Link>
         </header>
         <main>
-          <Switch>
+          <Routes>
             <Route path="/" exact component={Home} />
             <Route path="/edit/:id" component={EditEmployee} />
-          </Switch>
+          </Routes>
         </main>
       </div>
     </Router>
